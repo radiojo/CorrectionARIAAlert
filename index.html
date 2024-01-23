@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="mon-bouton">Afficher l'alerte</button>
+    <div id="mon-alerte" role="alert"></div>
+    <script type="text/template" id="contenu-alerte">
+        <p>Ceci est une alerte</p>
+    </script>
+    <script>
+        let monBouton = document.querySelector('#mon-bouton');
+        monBouton.addEventListener('click', afficherAlerte);
+
+        function afficherAlerte() {
+            let monAlerte = document.querySelector('#mon-alerte');
+            let contenuAlerte = document.querySelector('#contenu-alerte').innerHTML;
+
+            monAlerte.innerHTML = contenuAlerte;
+        }
+    </script>
